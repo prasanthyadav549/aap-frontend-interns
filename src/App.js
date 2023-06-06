@@ -1,10 +1,12 @@
 
 
+import { GoogleLogin } from '@react-oauth/google';
 import './App.css';
 import MenuAppBar from './components/Header';
 import SignIn from './components/Login';
 import SignUp from './components/SignUp';
 import {BrowserRouter as Router,Route, Routes} from 'react-router-dom';
+import GoogleLoginComponent from './components/GoogleLoginComponent';
 
 
 function App() {
@@ -12,6 +14,7 @@ function App() {
   
      <Router>
     <div className="App">
+    
     <Routes>
         
         <Route path="/" element={<SignIn/>}/>
@@ -19,7 +22,7 @@ function App() {
          <Route path="/calender" element={<MenuAppBar/>}/>
      
       </Routes>
-      
+        <GoogleLoginComponent />
 
    
   </div>
@@ -27,4 +30,8 @@ function App() {
   );
 }
 
-export default App;
+export default App
+
+  
+  
+
